@@ -1,9 +1,9 @@
 
 resource "google_compute_disk" "disk" {
-name = var.disk_name
-size = var.disk_size
-type = var.disk_type
-zone  = var.disk_zone
+name = "disk1"
+size = 10
+type = "pd-ssd"
+zone  = "europe-north1-a"
   }
 
 # pdmount-vm-tf-gcp-
