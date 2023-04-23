@@ -1,0 +1,12 @@
+
+resource "google_compute_disk" "disk" {
+name = var.disk_name
+size = var.disk_size
+type = var.disk_type
+zone  = var.disk_zone
+  }
+
+  resource "google_compute_attached_disk" "diskt" {
+    disk     = google_compute_disk.disk.id
+    instance = google_compute_instance.demotf.id
+    }
